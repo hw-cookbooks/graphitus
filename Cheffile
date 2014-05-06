@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'apache2'
+cookbook 'apt'
+cookbook 'graphitus', path: '.'
+
+cookbook 'fixtures', path: 'test/unit/fixtures'
+cookbook 'graphitus_wrapper', path: 'examples/graphitus_wrapper'

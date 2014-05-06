@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+  network:
+    - ["forwarded_port", {guest: 80, host: 8080}]
+    - ["forwarded_port", {guest: 8081, host: 8081}]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-12.04
+  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt]
+      - recipe[graphitus]
+      - recipe[graphitus_wrapper]
+    attributes:
+      apache:
+        listen_ports: ["80", "8081"]
