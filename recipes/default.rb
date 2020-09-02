@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: graphitus
+# Cookbook:: graphitus
 # Recipe:: default
 #
-# Copyright 2014, Heavy Water Operations, LLC.
+# Copyright:: 2014, Heavy Water Operations, LLC.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,4 +16,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include_recipe "git"
+include_recipe 'git'
