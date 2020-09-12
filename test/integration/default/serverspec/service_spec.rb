@@ -11,16 +11,15 @@ RSpec.configure do |c|
   end
 end
 
-describe "Apache2" do
-
-  it "is listening on port 8081" do
+describe 'Apache2' do
+  it 'is listening on port 8081' do
     expect(port(8081)).to be_listening
   end
 
-  it "web port responds as a graphitus site" do
+  it 'web port responds as a graphitus site' do
     uri = URI('http://127.0.0.1:8081')
     response = Net::HTTP.get_response(uri)
-    js = Regexp.escape(%{href="css/graphitus.css"})
+    js = Regexp.escape(%(href="css/graphitus.css"))
     expect(response.body).to match(Regexp.new(js))
   end
 end

@@ -1,5 +1,5 @@
-name "test"
-version "1.2.3"
+name 'test'
+version '1.2.3'
 
-depends "apache2"
-depends "graphitus"
+depends 'apache2'
+depends 'graphitus'
