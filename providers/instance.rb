@@ -39,7 +39,7 @@ action :create do
   new_resource.updated_by_last_action(f.updated_by_last_action?)
 
   i = file ::File.join(new_resource.path, 'dashboard-index.json') do
-    rows = {rows: new_resource.dashboards.keys.map { |id| {id: id} }}
+    rows = { rows: new_resource.dashboards.keys.map { |id| {id: id} }}
     content JSON.pretty_generate(rows)
     action :create
   end
