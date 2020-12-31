@@ -40,4 +40,3 @@ describe 'graphitus_instance provider' do
   context 'for delete action' do
   end
 end
-
